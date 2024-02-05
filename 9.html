@@ -1,4 +1,4 @@
-<!-- 9. Create a simple list of items as mentioned in the below image. -->
+<!-- 9. Create a web page with a registration form, using the CSS attribute selector change the text color of each input field to any other color. -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,20 +6,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Styled List</title>
+    <title>Register</title>
+
     <style>
-      li {
-        list-style-type: lower-roman;
+      input[name="user-name"] {
+        color: blue;
+      }
+
+      input[name="user-email"] {
+        color: green;
+      }
+
+      input[name="user-password"] {
+        color: red;
       }
     </style>
   </head>
   <body>
-    <h1>Requirements</h1>
-    <ul>
-      <li>System with minimum i3 processor or better.</li>
-      <li>At least 4 GB of RAM.</li>
-      <li>Working internet connection.</li>
-      <li>Dedication to learn</li>
-    </ul>
+    <form action="#">
+      <div>
+        <label for="user-name">Name: </label>
+        <input type="text" name="user-name" id="user-name" required />
+      </div>
+      <br />
+      <div>
+        <label for="user-email">Email: </label>
+        <input type="email" name="user-email" id="user-email" required />
+      </div>
+      <br />
+      <div>
+        <label for="user-password">Password: </label>
+        <input
+          type="password"
+          name="user-password"
+          id="user-password"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <input type="submit" value="Register Account" />
+      </div>
+    </form>
   </body>
 </html>
